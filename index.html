@@ -4,27 +4,33 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>SHREE SATYANARAYAN Inter College</title>
+<title>SSIC</title>
 
 <link rel="stylesheet" href="style.css">
 
-<!-- GSAP (animations) -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
 </head>
 
 <body>
 
-<!-- TOP BAR -->
-<div class="topbar">
-📞 01398 257063 | 9456013216 | 7417257063 |
-📧 ssicshamli@gmail.com |
-📍 Near New Mandi Sthal, Shamli
+<!-- LOADER -->
+<div id="loader">
+  <div class="spinner"></div>
+  <h2>Loading Excellence...</h2>
 </div>
 
-<!-- NAVBAR -->
+<!-- PARTICLES -->
+<canvas id="particles"></canvas>
+
+<!-- TOPBAR -->
+<div class="topbar">
+📞 01398 257063 | 📧 ssicshamli@gmail.com | 📍 Shamli
+</div>
+
+<!-- NAVBAR (FIXED SAFE) -->
 <header>
 <nav>
+
 <a href="#home">Home</a>
 
 <div class="dropdown">
@@ -42,91 +48,89 @@
 <a href="disclosure.html">Mandatory Disclosure</a>
 
 <button onclick="toggleDark()">🌙</button>
+
 </nav>
 </header>
 
-<!-- HERO (CINEMATIC + SLIDER BACKGROUND) -->
-<div class="hero" id="home">
-  <div class="hero-overlay"></div>
+<!-- HERO -->
+<section class="hero" id="home">
 
-  <div class="hero-content">
-    <h1>SHREE SATYANARAYAN INTER COLLEGE</h1>
-    <p>Established 1978 • Building Future Leaders</p>
+<div class="hero-overlay"></div>
 
-    <button onclick="scrollToSection()">Explore Campus ↓</button>
-  </div>
-
-  <div class="scroll-indicator"></div>
+<div class="hero-content">
+<h1>SHREE SATYANARAYAN INTER COLLEGE</h1>
+<p>Discipline • Knowledge • Future Leaders</p>
+<button onclick="scrollDown()">Explore ↓</button>
 </div>
 
-<!-- QUICK HIGHLIGHTS -->
-<section class="reveal">
-<h2>Welcome to Excellence in Education</h2>
-<p>We believe in discipline, knowledge, and character building for a brighter future.</p>
 </section>
 
-<!-- PRINCIPAL MESSAGE (UPGRADED CARD) -->
+<!-- ABOUT (BEAST UPGRADED) -->
+<section class="section reveal" id="about">
+
+<h2>About Our Institution</h2>
+
+<div class="about-box">
+
+<p><b>SHREE SATYANARAYAN INTER COLLEGE</b> is a center of excellence where discipline meets knowledge.</p>
+
+<p>We focus on building strong moral values, academic strength, and real-world skills in every student.</p>
+
+<p>Our mission is to create responsible citizens who lead society with wisdom and confidence.</p>
+
+<p class="highlight">“Education is not learning facts, it is training the mind.”</p>
+
+</div>
+
+</section>
+
+<!-- PRINCIPAL -->
 <section class="principal reveal">
 
-<h2>Principal’s Message</h2>
+<h2>Principal Message</h2>
 
 <div class="principal-box">
 
-  <img src="https://via.placeholder.com/250x250" class="principal-img">
+<img src="images/principal.jpg">
 
-  <div class="principal-text">
-    <h3>Dear Parents, Greetings!</h3>
-
-    <p>
-    It gives me immense pleasure to welcome you to <b>SHREE SATYANARAYAN Inter College</b>.
-    Our institution is committed to providing quality education with discipline and values.
-    </p>
-
-    <p>
-    We aim to build responsible citizens who contribute positively to society.
-    </p>
-
-    <p><b>— Principal</b></p>
-  </div>
+<div>
+<h3>Dear Parents, Greetings!</h3>
+<p>We provide disciplined environment, quality education and strong value system.</p>
+<p><b>— Principal</b></p>
+</div>
 
 </div>
+
 </section>
 
-<!-- STREAMS -->
-<section class="reveal">
+<!-- STREAMS (BEAST CARDS) -->
+<section class="section reveal">
+
 <h2>Academic Streams</h2>
 
-<div class="card-container">
-<div class="card">Science</div>
-<div class="card">Commerce</div>
-<div class="card">Arts</div>
+<div class="cards">
+
+<div class="stream-card">
+<h3>Science</h3>
+<p>Physics • Chemistry • Biology • Maths</p>
 </div>
+
+<div class="stream-card">
+<h3>Commerce</h3>
+<p>Accounts • Business • Economics • Finance</p>
+</div>
+
+<div class="stream-card">
+<h3>Arts</h3>
+<p>History • Political Science • Sociology</p>
+</div>
+
+</div>
+
 </section>
 
-<!-- HIGHLIGHTS -->
-<section class="reveal">
-<h2>Why Choose Us?</h2>
-
-<div class="card-container">
-<div class="card">Experienced Faculty</div>
-<div class="card">Modern Infrastructure</div>
-<div class="card">Discipline Focus</div>
-<div class="card">Sports & Activities</div>
-</div>
-</section>
-
-<!-- CAMPUS SLIDER -->
-<section class="reveal">
-<h2>Campus Life</h2>
-
-<div class="slider">
-<img id="slide">
-</div>
-</section>
-
-<!-- FOOTER -->
 <footer>
-<p>© 2026 SHREE SATYANARAYAN Inter College | Shamli</p>
+© 2026 SSIC Shamli
 </footer>
 
 <script src="script.js"></script>
