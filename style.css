@@ -68,19 +68,20 @@ nav a:hover {
   display: block;
 }
 
-/* HERO */
+/* HERO (FIXED IMAGE HERE) */
 .hero {
   height: 90vh;
-  .hero {
-  background: url("https://via.placeholder.com/1500x800");
-}
+  background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)),
+              url("image.jpg");   /* ✅ YOUR IMAGE PATH FIXED */
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
+
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+
   color: white;
   animation: fadeIn 2s;
 }
@@ -145,47 +146,29 @@ footer {
   color: white;
 }
 
+.dark header {
+  background: rgba(2, 6, 23, 0.95);
+}
+
 .dark .card {
   background: #1e293b;
+  color: white;
+}
+
+.dark .topbar {
+  background: #0b1220;
+}
+
+.dark section {
+  background: transparent;
+}
+
+.dark nav a {
+  color: white;
 }
 
 /* ANIMATION */
 @keyframes fadeIn {
   from {opacity: 0;}
   to {opacity: 1;}
-}
-
-/* =========================
-   🌙 DARK MODE (FULL UPGRADE)
-========================= */
-
-.dark {
-  background: #020617;
-  color: white;
-}
-
-/* Header */
-.dark header {
-  background: rgba(2, 6, 23, 0.95);
-}
-
-/* Cards */
-.dark .card {
-  background: #1e293b;
-  color: white;
-}
-
-/* Top bar */
-.dark .topbar {
-  background: #0b1220;
-}
-
-/* Sections */
-.dark section {
-  background: transparent;
-}
-
-/* Links */
-.dark nav a {
-  color: white;
 }
