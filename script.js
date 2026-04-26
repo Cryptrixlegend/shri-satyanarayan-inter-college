@@ -1,59 +1,62 @@
 document.addEventListener("DOMContentLoaded", function () {
 
-  // =========================
-  // 🔥 LOADER SYSTEM
-  // =========================
-  const loader = document.createElement("div");
-  loader.id = "pageLoader";
-  loader.innerHTML = `
-    <div class="spinner"></div>
-    <h3>Loading School Website...</h3>
-  `;
-  document.body.appendChild(loader);
+// =========================
+// 🔥 LOADER SYSTEM (FAST 3 SEC FIX)
+// =========================
 
-  // Loader CSS injection
-  const style = document.createElement("style");
-  style.innerHTML = `
-    #pageLoader {
-      position: fixed;
-      top:0;
-      left:0;
-      width:100%;
-      height:100%;
-      background:#0f172a;
-      color:white;
-      display:flex;
-      flex-direction:column;
-      justify-content:center;
-      align-items:center;
-      z-index:9999;
-    }
+const loader = document.createElement("div");
+loader.id = "pageLoader";
+loader.innerHTML = `
+  <div class="spinner"></div>
+  <h3>Loading School Website...</h3>
+`;
+document.body.appendChild(loader);
 
-    .spinner {
-      width:60px;
-      height:60px;
-      border:6px solid #334155;
-      border-top:6px solid #38bdf8;
-      border-radius:50%;
-      animation:spin 1s linear infinite;
-      margin-bottom:15px;
-    }
+// loader CSS
+const style = document.createElement("style");
+style.innerHTML = `
+  #pageLoader {
+    position: fixed;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    background:#0f172a;
+    color:white;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    z-index:9999;
+  }
 
-    @keyframes spin {
-      0% { transform:rotate(0deg); }
-      100% { transform:rotate(360deg); }
-    }
-  `;
-  document.head.appendChild(style);
+  .spinner {
+    width:60px;
+    height:60px;
+    border:6px solid #334155;
+    border-top:6px solid #38bdf8;
+    border-radius:50%;
+    animation:spin 1s linear infinite;
+    margin-bottom:15px;
+  }
 
-  // Remove loader after load
-  window.onload = function () {
-    setTimeout(() => {
-      loader.style.opacity = "0";
-      loader.style.transition = "0.5s";
-      setTimeout(() => loader.remove(), 500);
-    }, 1200);
-  };
+  @keyframes spin {
+    0% { transform:rotate(0deg); }
+    100% { transform:rotate(360deg); }
+  }
+`;
+document.head.appendChild(style);
+
+// ✅ FIXED: 3 SECONDS ONLY (NO HEAVY LOAD WAIT)
+setTimeout(() => {
+  loader.style.opacity = "0";
+  loader.style.transition = "0.5s";
+
+  setTimeout(() => {
+    loader.remove();
+  }, 500);
+
+}, 3000); // 👈 EXACT 3 SECONDS
 
   // =========================
   // 🌙 DARK MODE TOGGLE
